@@ -1,0 +1,182 @@
+/* Características generales */
+* {
+    font-family: 'Quicksand', sans-serif;
+    margin:0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style:none;
+    width: 100%;
+    padding:0;
+    margin:0;
+    text-align: right;
+}
+
+header { 
+    background-color:  #2e2e2e;
+    color: aliceblue;
+    padding: 4%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    max-width: 90vw;
+}
+
+li {
+    padding: 0;
+    margin:0;
+    max-width: 90vw
+}
+
+a {
+    text-decoration: none;
+    color: #aaa;
+    padding: 1%;
+    width: 50%;
+}
+
+.menu {
+    max-width: 50vw;
+}
+
+/* Estilo navbar */
+.logo img {
+    max-height: 4rem;
+    width: auto;
+}
+
+.logo h2 {
+    display: none;
+}
+
+.menu input[type="checkbox"], .menu .fa-bars, .menu .fa-times {
+    position: absolute;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    right: -79%;
+    top: -66px;
+    width: 4rem;
+    height: 4rem;
+}
+
+.menu .fa-bars, .menu .fa-times {
+    font-size: 2.5rem;
+    pointer-events: none;
+    padding: 6%;
+}
+  
+.menu input[type="checkbox"] {
+  opacity: 0;
+}
+
+.menu {
+  color: white;
+  position: relative;
+}
+
+.menu .links {
+  display: none;
+}
+  
+.menu input:checked ~ .links {
+  display: block;
+  margin-left: 73%;
+}
+  
+.menu input:checked ~ .fa-bars {
+  display: none;
+}
+
+.menu input:not(:checked) ~ .fa-times {
+  display: none;
+}
+
+.seleccionado {
+  font-weight: bolder;
+  color: aliceblue;
+}
+
+.links .cta {
+  font-weight: bolder;
+  color: olivedrab;
+}
+
+.gris {
+    background-color: #2e2e2e;
+    color:white
+}
+
+
+@media (min-width:1023px) {
+    /* Estilado header */
+    header {
+        padding: 1%;
+    }
+
+    nav {
+        display: inline-flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display:inline-flex;
+        width: 30%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .logo h2{
+        display: block;
+        width: fit-content;
+        margin: auto 0;
+    }
+
+    .menu input[type="checkbox"], .menu .fa-bars, .menu .fa-times{
+        display: none;
+    }
+
+    .menu {
+        display: inline-flex;
+        justify-content: space-between;
+    }
+
+    .menu .links {
+        text-align: start;
+        max-width: max-content;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .menu .links li {
+        font-size: small;
+        width: max-content;
+        padding: 0 10px;
+    }
+
+    .menu .links .long {
+        width: fit-content;
+    }
+}
+
+@media (min-width: 1243px) {
+    /* Corrección de navbar */
+        .menu {
+            right: -5%;
+        }
+    
+        .menu .links li {
+            padding: 0 1.3rem;
+        }
+    }    
